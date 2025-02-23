@@ -3,55 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Bài tập</title>
-</head>
-<body>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+        }
         .text {
-            font-family: 'Kanit', sans-serif;/
+            font-family: 'Kanit', sans-serif;
             font-size: 70px;
-            color:lightpink;
+            color: white;
             text-align: center;
         }
-    </style>
-    <style>
-        .textt {
-            font-family: 'Kanit', sans-serif;/
-            font-size: 70px;
-            color:black;
+         .header {
+            background-color: #FFC0CB;
+            text-align: center;
+            padding: 25px;
+            color: white;
+            font-size: 24px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
-    </style>
-    <h1 class="text"> Bài tập các buổi </h1>
-<style>
-a:link {
-  color: Pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: purple
- ;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: SlateBlue;
-  background-color: transparent;
-  text-decoration: none;
+        .header h1 {
+            font-size: 50px;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .content {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .content a {
+            display: block;
+            font-size: 24px;
+            color: black;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .content a:hover {
+            background: lightpink;
+            color: white;
+        }
+        .menu-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: lightpink;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .menu-button:hover {
+            background-color: #00CED1;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            margin: 0 1px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .footer i {
+            margin: 0 1px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+        .special-link {
+            color: green;
+            text-decoration: underline;
+        }
+        .special-link:hover {
+            color:SlateBlue;
+            text-decoration: none;
+        }
 
-}
-</style>
-  
-    <ul>
-        <a href="bai1.html"><p class="textt">Bài tập 1</a></p>
-        <a href="bai21.html"><p class="textt">Bài tập 2.1</a></p>
-        <a href="bai22.html"><p class="textt">Bài tập 2.2</a></p>
-        <a href="bai23.html"><p class="textt">Bài tập 2.3</a></p>
-        <a href="bai3.html"><p class="textt">Bài tập 3</a></p>
-        <a href="bai4.html"><p class="textt">Bài tập 4</a></p>
-    </ul>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="text">Bài tập các buổi</h1>
+        <p class="text">Đỗ Quang Anh | CNTTD2024B
+    </div>
+    
+    <div class="content">
+        <a href="bai1.html">❉ Bài tập 1</a>
+        <a href="bai21.html">❉ Bài tập 2.1</a>
+        <a href="bai22.html">❉ Bài tập 2.2</a>
+        <a href="bai23.html">❉ Bài tập 2.3</a>
+        <a href="bai3.html">❉ Bài tập 3</a>
+        <a href="bai4.html">❉ Bài tập 4</a>
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="menu-button" onclick="goToHome()">Về Menu Chính</button>
+    </div>
+
+    <script>
+        function goToHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    <div class="footer">
+        <p>Liên hệ tôi qua các tài khoản xã hội</p>
+        <a href="https://www.facebook.com/wangah710"><i class="fa fa-facebook-official"></i></a>
+        <a href="https://www.instagram.com/wangah710/"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-steam"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <p>by: Wang Anhh 
+        <a href="https://tracker.gg/valorant/profile/riot/hyasil%23uwu/overview" target="_blank" class="special-link">VLR.GG</a></p>
+
+    </div>
 </body>
 </html>
