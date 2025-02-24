@@ -14,6 +14,8 @@
             background-color: #F0F8FF;
             margin: 0;
             padding: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
         .text {
             font-family: 'Kanit', sans-serif;
@@ -21,7 +23,7 @@
             color: white;
             text-align: center;
         }
-         .header {
+        .header {
             background-color: #FFC0CB;
             text-align: center;
             padding: 25px;
@@ -105,13 +107,12 @@
             color:SlateBlue;
             text-decoration: none;
         }
-
     </style>
 </head>
-<body>
+<body onload="fadeIn()">
     <div class="header">
         <h1 class="text">Bài tập các buổi</h1>
-        <p class="text">Đỗ Quang Anh | CNTTD2024B
+        <p class="text">Đỗ Quang Anh | CNTTD2024B</p>
     </div>
     
     <div class="content">
@@ -124,12 +125,19 @@
     </div>
     
     <div style="text-align: center; margin-top: 20px;">
-        <button class="menu-button" onclick="goToHome()">Về Menu Chính</button>
+        <button class="menu-button" onclick="fadeOutAndGoToHome()">Về Menu Chính</button>
     </div>
 
     <script>
-        function goToHome() {
-            window.location.href = 'index.html';
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+
+        function fadeOutAndGoToHome() {
+            document.body.style.opacity = 0;
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1000);
         }
     </script>
 
@@ -143,7 +151,6 @@
         <a href="#"><i class="fa fa-linkedin"></i></a>
         <p>by: Wang Anhh 
         <a href="https://tracker.gg/valorant/profile/riot/hyasil%23uwu/overview" target="_blank" class="special-link">VLR.GG</a></p>
-
     </div>
 </body>
 </html>
