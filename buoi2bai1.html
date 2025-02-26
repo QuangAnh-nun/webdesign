@@ -3,8 +3,54 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>TestLab1</title>
 <style>
+    .menu-button {
+            font-size: 18px;
+            padding: 12px 24px;
+            background-color: Lightpink;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+        .menu-button:hover {
+            background-color: #00CED1;
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            margin: 0 1px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .footer i {
+            margin: 0 1px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+        .footer i:hover {
+            opacity:0.3;
+        }
+        .special-link {
+            color: green;
+            text-decoration: underline;
+        }
+        .special-link:hover {
+            color:SlateBlue;
+            text-decoration: none;
+        }
     body{
         background-color: #009294  ;
         color: #FFFFFF  ;
@@ -50,9 +96,30 @@
             <li><a href="http://www.opera.com/download/">Opera </a></li>
         </ul>
     </div>
-    
-    <div  id="footer">
+	<script>
+ function fadeOutAndGoToHome() {
+            document.body.style.opacity = 0;
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+    </script>
         <p>&copy; 2021 HNMU KHTN&CN.</p>
+<div style="text-align: center; margin-top: 20px;">
+        <button class="menu-button" onclick="fadeOutAndGoToHome()">Về Menu Chính</button>
+<div class="footer">
+        <p>Liên hệ tôi qua các tài khoản xã hội</p>
+        <a href="https://www.facebook.com/wangah710"><i class="fa fa-facebook-official"></i></a>
+        <a href="https://www.instagram.com/wangah710/"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-steam"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <p>by: Wang Anhh 
+        <a href="https://tracker.gg/valorant/profile/riot/hyasil%23uwu/overview" target="_blank" class="special-link">VLR.GG</a></p>
     </div>
+
+  
+
 </body>
 </html>
