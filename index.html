@@ -123,7 +123,7 @@
     </div>
     
     <div style="text-align: center; margin-top: 20px;">
-        <button class="menu-button" onclick="toggleBaiTap()"> Xem bài tập</button>
+        <button class="menu-button" onclick="toggleBaiTap()"> Xem bài tập buổi 1</button>
     </div>
 
     <div class="content" id="baiTap">
@@ -134,10 +134,21 @@
         <a href="bai3.html">❉ Bài tập 3</a>
         <a href="bai4.html">❉ Bài tập 4</a>
     </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="menu-button" onclick="toggleBaiTap2()"> Xem bài tập buổi 2</button>
+    </div>
+
+    <div class="content" id="baiTap2">
+        <a href="buoi2bai1.html">❉ Bài tập 1</a>
+        <a href="buoi2bai21.html">❉ Bài tập 2.1</a>
+        <a href="buoi2bai22.html">❉ Bài tập 2.2</a>
+        <a href="buoi2bai23.html">❉ Bài tập 2.3</a>
+        <a href="buoi2bai3.html">❉ Bài tập 3</a>
+    </div>
     <div style="text-align: center; margin-top: 20px;">
         <button class="menu-button" onclick="fadeOutAndGoToHome()">Về Menu Chính</button>
     </div>
-    
     <script>
         function fadeIn() {
             document.body.style.opacity = 1;
@@ -150,11 +161,11 @@
         }
         function toggleBaiTap() {
             let baiTap = document.getElementById("baiTap");
-            if (baiTap.style.maxHeight === "0px" || baiTap.style.maxHeight === "") {
-                baiTap.style.maxHeight = baiTap.scrollHeight + "px";
-            } else {
-                baiTap.style.maxHeight = "0px";
-            }
+            baiTap.style.maxHeight = baiTap.style.maxHeight === "0px" || baiTap.style.maxHeight === "" ? baiTap.scrollHeight + "px" : "0px";
+        }
+        function toggleBaiTap2() {
+            let baiTap2 = document.getElementById("baiTap2");
+            baiTap2.style.maxHeight = baiTap2.style.maxHeight === "0px" || baiTap2.style.maxHeight === "" ? baiTap2.scrollHeight + "px" : "0px";
         }
     </script>
 <div class="footer">
