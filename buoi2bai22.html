@@ -14,7 +14,6 @@
         body {
             background-color: #f5f5f5;
         }
-        /* Header */
         .header {
             background-color: #ffcc00;
             padding: 10px 0;
@@ -34,7 +33,6 @@
             font-size: 14px;
             text-transform: uppercase;
         }
-        /* Content */
         .container {
             width: 80%;
             margin: 20px auto;
@@ -69,7 +67,6 @@
             padding: 5px 10px;
             cursor: pointer;
         }
-        /* Footer */
         .footer {
             background-color: #333;
             color: white;
@@ -77,10 +74,33 @@
             padding: 10px;
             margin-top: 20px;
         }
+       .menu-button {
+            font-size: 18px;
+            padding: 12px 24px;
+            background-color: Lightpink;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+        .menu-button:hover {
+            background-color: #00CED1;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body>
+<script>
+function fadeOutAndGoToHome() {
+            document.body.style.opacity = 0;
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+</script>
 
     <div class="header">
         KENH14.VN
@@ -163,7 +183,9 @@
                 AC Milan gây sức ép khủng khiếp vào khoảng thời gian cuối trận nhưng đoàn quân của HLV Ole Gunnar Solskjaer vẫn có thể đứng vững và bảo toàn thành quả. Thậm chí nếu may mắn hơn, Pogba đã có thể lập cú đúp bàn thắng khi pha đánh đầu dũng mãnh của anh ở phút 88 đưa bóng đi vọt xà trong gang tấc            </p>
         </div>
     </div>
-   
+   <div style="text-align: center; margin-top: 20px;">
+        <button class="menu-button" onclick="fadeOutAndGoToHome()">Về Menu Chính</button>
+    </div>
     <div class="footer">
         Bản quyền © 2025 Kenh14.vn - Mọi quyền được bảo lưu.
     </div>
