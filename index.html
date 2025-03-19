@@ -168,6 +168,17 @@
         <a href="index.html">❉ Bài tập 2</a>
     </div>
     <div style="text-align: center; margin-top: 20px;">
+        <button class="menu-button" onclick="toggleBaiTap5()"> Xem bài tập buổi 5</button>
+    </div> 
+    <div class="content" id="baiTap5">
+        <a href="buoi5baia.html">❉ Bài tập A</a>
+        <a href="buoi5baib.html">❉ Bài tập B</a>
+        <a href="buoi5baic.html">❉ Bài tập C</a>
+        <a href="buoi5bai1.html">❉ Bài tập 1</a>
+        <a href="buoi5bai2.html">❉ Bài tập 2</a>
+        <a href="buoi5bai3.html">❉ Bài tập 3</a>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
         <button class="menu-button" onclick="fadeOutAndGoToHome()">Về Menu Chính</button>
     </div>
     <script>
@@ -195,6 +206,10 @@
         function toggleBaiTap4() {
             let baiTap4 = document.getElementById("baiTap4");
             baiTap4.style.maxHeight = baiTap4.style.maxHeight === "0px" || baiTap4.style.maxHeight === "" ? baiTap4.scrollHeight + "px" : "0px";
+        }
+        function toggleBaiTap5() {
+            let baiTap5 = document.getElementById("baiTap5");
+            baiTap5.style.maxHeight = baiTap5.style.maxHeight === "0px" || baiTap5.style.maxHeight === "" ? baiTap5.scrollHeight + "px" : "0px";
         }
     </script>
 <div class="footer">
