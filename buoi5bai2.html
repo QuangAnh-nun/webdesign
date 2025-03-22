@@ -127,6 +127,94 @@
             font-weight: bold;
             color: #E53935;
          }
+        .container {
+            display: flex;
+            width: 90%;
+            margin: 20px auto;
+        }
+        .left-column {
+            width: 65%;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 35%;
+        }
+        .main-news img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .main-news h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .main-news p {
+            color: gray;
+            font-size: 14px;
+        }
+        .sub-news {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .sub-news .news-item {
+            flex: 1;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sub-news .news-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .sub-news .news-item a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        .sub-news .news-item a:hover {
+            color: red;
+        }
+        .right-column .news-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .right-column .news-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .right-column .news-item a {
+            flex: 1;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .right-column .news-item a:hover {
+            color: red;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: lightblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: lightgrey;
+            }
     </style>
 </head>
 <body>
@@ -152,37 +240,57 @@
         <div class="menu-icon">☰</div>
     </nav>
     <div class="container">
-        <div class="main-content">
-            <div class="large-image">
+        <div class="left-column">
+            <div class="main-news">
                 <img src="https://image.nhandan.vn/w800/Uploaded/2025/jgmztgzs0208/2025_03_18/trump-5641-6153.jpg.webp" alt="Main News">
+                <h2>Nga đồng ý ngừng tấn công vào cơ sở năng lượng của Ukraine</h2>
+                <p><strong>Công an nhân dân</strong> - 16 phút - 4235 liên quan</p>
             </div>
-            <a href="https://baomoi.com/" class="special-link">Nga đồng ý ngừng tấn công vào cơ sở năng lượng của Ukraine</a>
-            <p>Mô tả ngắn về nội dung bài viết chính...</p>
-            <div class="articles">
-                <div>
-                    <img src="image1.jpg" alt="Bài viết 1">
-                    <p>Bài viết 1</p>
+            <div class="sub-news">
+                <div class="news-item">
+                    <img src="https://giadinh.mediacdn.vn/296230595582509056/2025/3/16/gia-vang-hom-nay-1742094987567767396070.jpg" alt="Sub News">
+                    <a href="#">Giá vàng hôm nay 19/3: Vàng nhẫn lập đỉnh mới, đạt mức 98,7 triệu đồng/lượng</a>
                 </div>
-                <div>
-                    <img src="image2.jpg" alt="Bài viết 2">
-                    <p>Bài viết 2</p>
+                <div class="news-item">
+                    <img src="https://images2.thanhnien.vn/528068263637045248/2024/5/3/hlv-kim-sang-sik-1714744215390523397901.jpg" alt="Sub News">
+                    <a href="#">Tuyển Việt Nam đấu Campuchia: Khi ông Kim Sang Sik toan tính</a>
                 </div>
-                <div>
-                    <img src="image3.jpg" alt="Bài viết 3">
-                    <p>Bài viết 3</p>
+                <div class="news-item">
+                    <img src="https://cdnmedia.baotintuc.vn/Upload/YfjSW8DWZtJKwKaxMsyNng/files/193Zelensky.png" alt="Sub News">
+                    <a href="#">Tổng thống Ukraine lên tiếng sau điện đàm thượng đỉnh Mỹ - Nga</a>
                 </div>
             </div>
         </div>
-        <div class="sidebar">
-            <h3>Tin nổi bật</h3>
-            <ul>
-                <li><a href="#">Tin tức 1</a></li>
-                <li><a href="#">Tin tức 2</a></li>
-                <li><a href="#">Tin tức 3</a></li>
-                <li><a href="#">Tin tức 4</a></li>
-            </ul>
+        <div class="right-column">
+            <div class="news-item">
+                <img src="https://image.plo.vn/w1000/Uploaded/2025/xqeioxdrky/2023_10_29/p23-chinh-thay-1699-2346-6521.jpg.webp" alt="Right News">
+                <a href="#">Cán bộ T.PHCM mạnh dạn đổi mới vì dân - Bài 3: Cán bộ dám vận động khéo, người dân có nơi ở mới khang trang</a>
+            </div>
+            <div class="news-item">
+                <img src="https://cdn2.tuoitre.vn/thumb_w/480/471584752817336320/2025/3/18/dsc04437-1742312914889925199639.jpg" alt="Right News">
+                <a href="#">100 cán bộ Đoàn xuất sắc nhận Giải thưởng Lý Tự Trọng</a>
+            </div>
+            <div class="news-item">
+                <img src="https://cdnmedia.baotintuc.vn/Upload/QyT9wJmU1noXJSi1NqCRyg/files/2024/khongkich-18-3.jpg" alt="Right News">
+                <a href="#">Triều Tiên lên án các cuộc không kích của Mỹ vào Houthis</a>
+            </div>
+            <div class="news-item">
+                <img src="https://photo-baomoi.bmcdn.me/w700_r1/2025_03_19_23_51747746/9b5adf04d64a3f14665b.jpg.avif" alt="Right News">
+                <a href="#">Đìu hiu phố đi bộ 30 tỷ đồng ở Hà Nội: Người bán nhiều hơn khách</a>
+            </div>
+            <div class="news-item">
+                <img src="https://media.vov.vn/sites/default/files/styles/large/public/2025-03/aa1azpzn.jpg" alt="Right News">
+                <a href="#">Giải mã lối đánh giúp Nga đẩy lui quân Ukraina tại Kursk</a>
+            </div>
+            </div>
         </div>
     </div>
+    <section id="trangchu" class="fade-in">
+        <div class="container">
+            <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+        </div>
+    </section>
 </body>
 </html>
+
 
