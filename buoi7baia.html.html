@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Số Chẵn Lẻ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4da6ff;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4da6ff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3399ff;
+        }
+
+        #ketQua {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Kiểm Tra Chẵn Hay Lẻ</h2>
+    <input type="number" id="soNhap" placeholder="Nhập một số bất kỳ" />
+    <button onclick="kiemTra()">Kiểm tra</button>
+    <div id="ketQua"></div>
+</div>
+
+<script>
+    function kiemTra() {
+        var so = document.getElementById("soNhap").value;
+        var ketQua = document.getElementById("ketQua");
+
+        if (so === "") {
+            ketQua.textContent = "Vui lòng nhập một số.";
+            ketQua.style.color = "red";
+            return;
+        }
+
+        if (isNaN(so)) {
+            ketQua.textContent = "Giá trị nhập không hợp lệ!";
+            ketQua.style.color = "red";
+            return;
+        }
+
+        if (so % 2 === 0) {
+            ketQua.textContent = so + " là số chẵn.";
+            ketQua.style.color = "green";
+        } else {
+            ketQua.textContent = so + " là số lẻ.";
+            ketQua.style.color = "blue";
+        }
+    }
+</script>
+
+</body>
+</html>
