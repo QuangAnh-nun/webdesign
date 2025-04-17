@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Slide Show Ảnh Thiên Nhiên</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1d4350, #a43931);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      width: 90%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .slide {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 12px 18px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      border-radius: 50%;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #00e6ac;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #00bfa5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Cảnh núi rừng">
+    </div>
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Rừng thông sương mù">
+    </div>
+    <div class="slide">
+      <img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/10/tai-anh-phong-canh-dep-thump.jpg" alt="Thác nước vùng cao">
+    </div>
+    <div class="slide">
+      <img src="https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_1280.jpg" alt="Ruộng bậc thang Sapa">
+    </div>
+    <div class="slide">
+      <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_1280.jpg" alt="Hồ trên núi cao">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <a href="index.html" class="home-button">Trang Chủ</a>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.style.display = "none");
+      slides[index].style.display = "block";
+    }
+
+    function changeSlide(n) {
+      currentSlide = (currentSlide + n + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+
+    // Tự động chuyển slide sau 5 giây
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+  </script>
+
+</body>
+</html>
