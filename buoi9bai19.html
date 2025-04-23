@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thao Tác Với Class</title>
+    <style>
+      body {
+        font-family: 'Kanit', sans-serif;
+        background: #f0f4f8;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: #0077cc;
+        font-weight: bold;
+      }
+      a:hover {
+        color: #005fa3;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      .font_chu {
+        font-family: 'Kanit', sans-serif;
+      }
+      .mau_chu {
+        color: lightpink;
+      }
+      .co_chu {
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">← Quay về trang chủ</a>
+
+    <h1 class="font_chu" id="td1">Demo về các thao tác với class</h1>
+
+    <button onclick="tonho()">Thử thay đổi kích cỡ chữ</button>
+
+    <script>
+      var pt = document.getElementById("td1");
+      pt.classList.add("mau_chu", "co_chu");
+
+      function tonho() {
+        pt.classList.toggle("co_chu");
+      }
+    </script>
+  </body>
+</html>

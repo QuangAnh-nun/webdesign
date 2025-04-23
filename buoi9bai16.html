@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thay đổi node</title>
+  <style>
+    body {
+      font-family: 'Cascadia Mono', monospace;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    #container {
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+      margin: 10px 0;
+    }
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #005fa3;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">← Quay về trang chủ</a>
+  
+  <div id="container">
+    <p id="p1">Đây là đoạn văn bản thứ nhất.</p>
+    <p id="p2">Đây là đoạn văn bản sẽ bị thay thế.</p>
+  </div>
+
+  <button onclick="changenode()">Thay đổi đoạn văn bản</button>
+
+  <script>
+    function changenode() {
+      var node = document.createElement("div");
+      node.innerText = "Đây là đoạn văn bản mới đã thay thế!";
+      var container = document.getElementById("container");
+      var oldNode = document.getElementById("p2");
+      container.replaceChild(node, oldNode);
+    }
+  </script>
+</body>
+</html>
